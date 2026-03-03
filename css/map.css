@@ -1,0 +1,44 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.desplegable{
+    width: 85%;
+    margin: 50px auto;
+    
+}
+
+.desplegable path{
+
+    fill: #395886;
+    stroke: #ffffff;
+    stroke-width: 2px;
+}
+
+.desplegable path:hover{
+    fill: #638ECB;
+}
+
+/*#mapageneral{
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+*/
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 200px auto;
+    background-color: #F0F3FA;
+    border-radius: 10px 10px 0 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+svg{
+    width: 100%;
+    height: auto;
+}
