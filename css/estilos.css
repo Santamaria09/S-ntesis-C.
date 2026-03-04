@@ -1,149 +1,145 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    
+    margin: 0;
+    padding: 0;
 }
 
-header{ /* background-size: 
-    cover; height: 100vh; 
-    background-repeat: no-repeat; 
-    background-image: url(../imagen/134140111309214729.jpg) ; 
-    background-position: center; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;  */
-    position: relative; }
+html, body {
+    overflow-x: hidden;
+}
 
+header {
+    /* Si quieres un background fijo, puedes descomentar estas líneas:
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: url(../imagen/134140111309214729.jpg);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+    position: relative;
+}
 
-.nav-p{ 
+.navbar {
     position: absolute; 
-    width: 100%; 
-    z-index: 10; 
-    background: rgba(95, 95, 95, 0);
-
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3) !important; 
+    z-index: 10;    
+    padding: 0.5rem 1rem;
 }
 
+@media (min-width: 992px) {
+    .navbar-collapse {
+        justify-content: center !important; 
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 15px; /* espaciado entre links */
+    }
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); 
+}
+
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.6) !important; 
+    border: none !important;
+    backdrop-filter: blur(5px);
+}
+
+.dropdown-item {
+    color: white !important;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.carousel-text {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%);
+    color: white;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 2;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+}
 
 .carousel-item {
     position: relative;
 }
 
 .carousel-item img { 
-    height: 100vh; 
+    height: 100vh;
+    width: 100%;
     object-fit: cover; 
-} 
+}
 
 .carousel-item::before { 
-    content: ""; 
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(0,0,0,0.3); 
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
     pointer-events: none;
     top: 0;
     left: 0;
 }
 
-.menu{
-    display: flex;
-    justify-content:center;
-    list-style: none;
-    margin-top: 20px;
-
-}
-
-
-.menu li{
-    position: relative;
-}
-
-.menu >li >a{
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    display: block;
-}
-
-
-.submenu{
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    
-}
-
-.menu li:hover .submenu{
-    display: block;
-}
-
-.submenu li a{
-    padding: 10px;
-    display: block;
-    color: white;
-    text-decoration: none;
-}
-
-.submenu li:hover{
-    background-color: #a3a1a100;
-}
-
-header h2{
-    width: 50%;
-    margin-right: 50px;
-    text-align: center;
-    
-}
-
 .swiper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 50px auto;
-  position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
 }
-
 
 .swiper-button-next,
 .swiper-button-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 20;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
 }
 
 .swiper-wrapper {
-  align-items: stretch;
+    align-items: stretch;
 }
 
 .swiper-button-next {
-  right: 0;
-  background-color: aqua;
+    right: 0;
 }
 
 .swiper-button-prev {
-  left: 0;
+    left: 0;
 }
 
 .swiper-slide img {
-  width: 100%;
-  height: 450px;  
-  object-fit: cover;
-  border-radius: 50px;
-  display: block;
+    width: 100%;
+    height: 450px;  
+    object-fit: cover;
+    border-radius: 50px;
+    display: block;
 }
 
-
 .swiper-slide {
-  background: #7d777700;
-  color: white;
-  height: 500px;
-  border-radius: 15px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+    height: 500px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }
 
 section h2{
@@ -151,7 +147,28 @@ section h2{
     padding-left: 100px;
 }
 
+@media (max-width: 768px) {
 
+    .carousel-text {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        white-space: normal;
+        width: 90%;
+    }
 
+    .carousel-item img {
+        height: 60vh;
+    }
 
+    section h2 {
+        padding-left: 20px;
+        margin: 30px 0;
+        text-align: center;
+    }
 
+    .swiper-slide img {
+        height: 300px;
+    }
+
+}
