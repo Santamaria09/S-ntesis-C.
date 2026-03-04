@@ -3,9 +3,9 @@
     padding: 0;
 }
 
-html, body {
+/*html, body {
     overflow-x: hidden;
-}
+}*/
 
 header {
     /* Si quieres un background fijo, puedes descomentar estas líneas:
@@ -66,14 +66,13 @@ header {
 }
 
 .carousel-text {
-    display: flex;
     position: absolute;
     top: 50%;
     left: 40%;
+    width: 70%;
     transform: translate(-50%);
     color: white;
     text-align: left;
-    white-space: nowrap;
     z-index: 2;
     font-size: clamp(1.2rem, 4vw, 2.5rem);
 }

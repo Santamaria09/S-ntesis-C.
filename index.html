@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Turismo Y Reservas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css" />
@@ -309,6 +310,39 @@
   <div class="swiper-button-prev"></div>
       </div>
     </section>
+
+
+<footer class="bg-white border-top pt-4 pb-3 mt-5">
+  <div class="container">
+    <div class="row text-center text-md-start align-items-center">
+
+      <!-- Derechos -->
+      <div class="col-12 col-md-6 mb-3 mb-md-0">
+        <small class="text-muted">
+          &copy; <span id="year"></span> TuEmpresa. Todos los derechos reservados.
+        </small>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="col-12 col-md-3 mb-3 mb-md-0">
+        <a href="#" class="text-dark text-decoration-none d-block d-md-inline me-md-3">Aviso Legal</a>
+        <a href="#" class="text-dark text-decoration-none d-block d-md-inline">Privacidad</a>
+      </div>
+
+      <!-- Redes -->
+      <div class="col-12 col-md-3 text-md-end">
+        <a href="#" class="text-dark me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-dark me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
   
     <script src="/js/map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -337,6 +371,10 @@
       },
     });
   </script>
+
+  <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
   </body>
 </html>
