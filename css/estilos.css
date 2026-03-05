@@ -142,8 +142,8 @@ header {
 }
 
 section h2{
-    margin: 50px;
-    padding-left: 100px;
+    margin: 10px;
+    padding-left: 10px;
 }
 
 @media (max-width: 768px) {
@@ -170,4 +170,52 @@ section h2{
         height: 300px;
     }
 
+}
+
+.card-img{
+  position: relative;
+  display: block;
+}
+
+.card-img img{
+  width: 100%;
+  border-radius: 30px;
+}
+
+.card-img h3{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-content {
+    border-radius: 20px;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-body img {
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+footer p, footer small {
+  margin: 0 0 0.5rem 0; /* Espaciado consistente */
+}
+
+footer .bi {
+  font-size: 1.5rem; /* Íconos un poco más grandes */
+  vertical-align: middle;
+}
+
+/* Opcional: que el texto “Inspírate en las redes...” quede con algo de espacio abajo */
+footer .text-md-end p {
+  margin-bottom: 0.75rem;
 }

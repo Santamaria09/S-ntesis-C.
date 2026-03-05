@@ -1,35 +1,29 @@
-*{  
+* {  
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.desplegable{
+.desplegable {
     width: 85%;
-    margin: 50px auto;
-    
+    margin: 40px auto;
 }
 
-.desplegable path{
-
+.desplegable path {
     fill: #395886;
     stroke: #ffffff;
     stroke-width: 2px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.desplegable path:hover{
+.desplegable path:hover {
     fill: #638ECB;
 }
 
-#mapageneral{
-    transition: transform 0.6s ease;
-    transform-origin: 0 0;
-}
 
-
-.container{
+.container {
     display: flex;
-    overflow: hidden;
     justify-content: center;
     align-items: center;
     margin: 100px 200px auto;
@@ -39,8 +33,36 @@
     border-bottom-right-radius: 10px;
 }
 
-svg{
+svg {
     width: 100%;
     height: auto;
     display: block;
+}
+
+#label_points circle {
+    r: 10;
+    fill: rgb(77, 198, 206);
+    stroke: white;
+    stroke-width: 2;
+    cursor: pointer;
+}
+
+.circle{
+    pointer-events: all;
+}
+
+.info-box{
+  position: absolute;
+  top: 120px;
+  right: 80px;
+
+  width: 300px;
+  background: white;
+  padding: 15px;
+
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+
+  display: none;
+  z-index: 1000;
 }

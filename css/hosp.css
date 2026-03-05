@@ -1,0 +1,134 @@
+/*estilo general de la pagina osea el color negro de fondo y sus latras */
+body{
+    background:#121212;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/*esto ara que las tarjetas de los estoles pasen de estar horizontales a estar verticales*/
+#hoteles {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+/*esta es la tarjeta de presentacion osea el redtangulo de color negro mas claro que aparece en la pagina*/
+.card-hotel {
+    background: #1e1e1e;
+    width: 220px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    color: white;
+
+
+}
+/*este es el un efecto visual que tiene cuando pasas el curasor por una de las tarjetas de un hotel*/
+.card-hotel:hover {
+    transform: scale(1.05);
+
+
+}
+/*sirve para controlar cómo se ve la imagen dentro de la tarjeta del hotel.*/
+.card-hotel img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/*esto sirve para separar de los bordes el texto */
+.info-hotel {
+    padding: 15px;
+}
+
+.estado {
+    color: #00e676;
+    font-size: 14px;
+}
+
+/*
+.precio {
+    font-weight: bold;
+    margin-top: 8px;
+    color: #00e676;
+}¨*/
+
+/* MODAL */
+
+
+
+/*controla el fondo y posicionamiento de la ventana moda*/
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+/*easto le da estilo a la tarjeta donde van la informacion del hotel*/
+.modal-content {
+    background: #1e1e1e;
+    width: 400px;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    position: relative;
+    animation: aparecer 0.3s ease;
+}
+/*esto es para la imagen que va adentro de la tarjeta*/
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+ /*este es un estilo del boton para cerrar la ventana*/
+.cerrar {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*es de una animacion*/
+@keyframes aparecer {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+.btn-reserva{
+
+    background: linear-gradient(135deg, #043e80, #055c26);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    margin: 20px;
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* efecto cuando pasas el mouse */
+.btn-reserva:hover{
+
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+
+}
+
+
+/* efecto cuando haces click */
+.btn-reserva:active{
+
+    transform: scale(0.95);
+
+}
